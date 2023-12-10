@@ -168,7 +168,7 @@ def main():
         tmp = lines[line].split()
         if tmp[0] == 'jmp':
             if tmp[1] in labels:
-                result = assemblyJMP(splitLine[1],labels,int(tmp[2])+2)
+                result = assemblyJMP(tmp[1],labels,int(tmp[2])+2)
                 lines[line] = "0x" + "0" * (16-len(str(memoryindex))) + str(memoryindex) + "  " + result
             else:
                 exit(69)
