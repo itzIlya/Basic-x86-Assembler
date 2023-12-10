@@ -321,6 +321,7 @@ def assemblyPUSH(operand1):
             elif (int(operand1,16) < 2**32):
                 value = "68 " + toLittleEndian32(operand1)
         else:
+            sth = hex(int(operand1))[2:]
             if (len(hex(int(operand1))[2:])) == 1:
                 sth = "0" + hex(int(operand1))[2:]
             if (int(operand1) < 2**8):
