@@ -327,7 +327,7 @@ def assemblyPUSH(operand1):
             if (int(operand1) < 2**8):
                 value = "6A " + sth
             elif (int(operand1) < 2**16):
-                value = "66 68 " + toLittleEndian32(sth)
+                value = "68 " + toLittleEndian32(sth)
             elif (int(operand1) < 2**32):
                 value = "68 " + toLittleEndian32(sth)
 
